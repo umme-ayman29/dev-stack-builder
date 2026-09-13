@@ -5,6 +5,7 @@ import "./App.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function App() {
   const [technologies, setTechnologies] = useState([]);
 const [loading, setLoading] = useState(true);
@@ -259,6 +260,61 @@ useEffect(() => {
 </section>
 
       </main>
+     <footer className="footer">
+  <div className="footer-container">
+
+    {/* Left - Branding */}
+    <div className="footer-brand">
+      <div className="footer-logo">
+  <img src="/logo-text.png" alt="Dev Stack" />
+</div>
+      <p>
+        Curated tools, technologies, and resources for developers
+        building modern software.
+      </p>
+
+      <div className="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+
+    {/* Product */}
+    <div className="footer-column">
+      <h4>PRODUCT</h4>
+      <a href="#">Home</a>
+      <a href="#">Technologies</a>
+      <a href="#">Projects</a>
+    </div>
+
+    {/* Company */}
+    <div className="footer-column">
+      <h4>COMPANY</h4>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Careers</a>
+    </div>
+
+    {/* Legal */}
+    <div className="footer-column">
+      <h4>LEGAL</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="footer-bottom">
+    <p>© 2026 Dev Stack. All rights reserved.</p>
+
+    <div className="footer-quick-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
