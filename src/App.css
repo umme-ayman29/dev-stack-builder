@@ -524,3 +524,558 @@ main p {
     max-width: 330px;
   }
 }
+
+
+/* =========================================
+   TECHNOLOGY SECTION
+========================================= */
+
+.technology-section {
+  width: 100%;
+  padding: 80px 40px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.technology-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.technology-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.technology-header h2 {
+  margin: 0 0 8px;
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1a1d2d;
+}
+
+.technology-header h2 span {
+  color: #e867b4;
+}
+
+.technology-header p {
+  margin: 0;
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #8a92a6;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.technology-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* =========================================
+   TECHNOLOGY GRID
+========================================= */
+
+.technology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.technology-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #efeef4;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TOP ROW
+========================================= */
+
+.technology-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 36px;
+  margin-bottom: 18px;
+}
+
+.technology-logo {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.technology-logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.technology-badge {
+  padding: 5px 9px;
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.popular {
+  background: #EBF8FF;
+  color:#00A3C4;
+}
+
+.versatile {
+  background: #E6FFFA;
+  color: #234e52;
+}
+
+.fast {
+  background: #fffaf0;
+  color: #dd6b20;
+}
+
+.standard {
+  background: #e6fffa;
+  color: #276749;
+}
+
+.top-sql {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.cache {
+  background: #fff5f5;
+  color: #e53e3e;
+}
+
+.ubiquitous {
+  background: #fefcbf;
+  color: #d69e2e;
+}
+
+.essential {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+.robust {
+  background: #e6fffa;
+  color: #00a3c4;
+}
+
+.modern {
+  background: #e6fffa;
+  color: #319795;
+}
+
+.containers {
+  background: #ebf8ff;
+  color: #3182ce;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.technology-card-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.technology-card-content p {
+  margin: 0;
+
+  min-height: 58px;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #64748b;
+  text-align: left;
+}
+
+/* =========================================
+   META
+========================================= */
+
+.technology-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 18px 0;
+}
+
+.category-tag {
+  padding: 4px 10px;
+
+  border-radius: 6px;
+
+  background: #f8fafc;
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+.difficulty {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.rating {
+  margin-left: auto;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #0f172a;
+}
+
+.star {
+  margin-right: 3px;
+  color: #f59e0b;
+}
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-stack-btn {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #0f172a;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-stack-btn:hover {
+  background: #0a0d14;
+}
+
+/* =========================================
+   YOUR STACK
+========================================= */
+
+.stack-sidebar {
+  position: sticky;
+  top: 100px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #efeef4;
+  border-radius: 16px;
+
+  box-sizing: border-box;
+}
+
+.stack-header h3 {
+  margin: 0 0 6px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.stack-header p {
+  margin: 0;
+
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* =========================================
+   EMPTY STACK
+========================================= */
+
+.empty-stack {
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+  padding: 40px 20px;
+
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.empty-stack p {
+  margin: 0;
+
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* =========================================
+   SELECTED STACK
+========================================= */
+
+.selected-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.selected-stack-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+
+  border: 1px solid #efeef4;
+  border-radius: 10px;
+}
+
+.selected-stack-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-stack-info img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.selected-stack-info span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.selected-stack-item button {
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 20px;
+  line-height: 1;
+
+  color: #94a3b8;
+
+  cursor: pointer;
+}
+
+.selected-stack-item button:hover {
+  color: #e53e3e;
+}
+/* =========================================
+   REMOVE ALL BUTTON
+========================================= */
+
+.remove-all-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #e53e3e;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-all-btn:hover {
+  background: #fff1f2;
+  border-color: #fca5a5;
+}
+/* =========================================
+   ADDED STACK BUTTON STATE
+========================================= */
+
+.add-stack-btn:disabled {
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   SELECTED STACK CATEGORY
+========================================= */
+
+.selected-stack-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.selected-stack-info small {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a3b8;
+}
+/* =========================================
+   TECHNOLOGY RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .technology-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-sidebar {
+    position: static;
+  }
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .technology-section {
+    padding: 60px 20px;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-header h2 {
+    font-size: 28px;
+  }
+}
+/* =========================================
+   ADDED BUTTON - FINAL STATE
+========================================= */
+
+.add-stack-btn:disabled {
+  background: #e2e8f0 !important;
+  color: #64748b !important;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+
+/* =========================================
+   TECHNOLOGY RESPONSIVE - FINAL
+========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .technology-layout {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+
+  .technology-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .technology-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Technology cards first */
+  .technology-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    order: 1;
+  }
+
+  /* Your Stack after all cards */
+  .stack-sidebar {
+    width: 100%;
+    position: static;
+    order: 2;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  .technology-section {
+    padding: 50px 20px;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .technology-card {
+    width: 100%;
+  }
+
+  .technology-header h2 {
+    font-size: 28px;
+  }
+
+  .stack-sidebar {
+    width: 100%;
+  }
+}
+
