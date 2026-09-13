@@ -2,28 +2,41 @@ import { useState } from "react";
 import "./App.css";
 import technologies from "./technologies";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   const [selectedTechnologies, setSelectedTechnologies] = useState([]);
 
   const addToStack = (technology) => {
-    if (selectedTechnologies.some((item) => item.id === technology.id)) {
-      return;
-    }
+  if (selectedTechnologies.some((item) => item.id === technology.id)) {
+    toast.warning(`${technology.name} is already in your stack!`);
+    return;
+  }
 
-    setSelectedTechnologies([
-      ...selectedTechnologies,
-      technology,
-    ]);
-  };
+  setSelectedTechnologies([
+    ...selectedTechnologies,
+    technology,
+  ]);
 
-  const removeFromStack = (id) => {
-    setSelectedTechnologies(
-      selectedTechnologies.filter((item) => item.id !== id)
-    );
-  };
+  toast.success(`${technology.name} added to your stack!`);
+};
+
+ const removeFromStack = (id) => {
+  const technology = selectedTechnologies.find(
+    (item) => item.id === id
+  );
+
+  setSelectedTechnologies(
+    selectedTechnologies.filter((item) => item.id !== id)
+  );
+
+  toast.info(`${technology.name} removed from your stack.`);
+};
 
   return (
     <div>
+      <ToastContainer />
       {/* Navbar */}
       <header className="navbar">
         <div className="logo">
@@ -210,11 +223,18 @@ function App() {
 
       {/* Remove All Button */}
       <button
-        className="remove-all-btn"
-        onClick={() => setSelectedTechnologies([])}
-      >
-        Remove All
-      </button>
+  className="remove-all-btn"
+  onClick={() => {
+    if (selectedTechnologies.length === 0) {
+      return;
+    }
+
+    setSelectedTechnologies([]);
+    toast.info("All technologies removed from your stack.");
+  }}
+>
+  Remove All
+</button>
     </>
   )}
 
