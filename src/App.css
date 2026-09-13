@@ -6,11 +6,40 @@
     #7138e8 100%
   );
 }
+
 #root {
   min-height: 100vh;
 }
 
-/* ================= NAVBAR ================= */
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
   width: 100%;
@@ -21,7 +50,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: #ffffff;
+  background: #ffffff;
   border-bottom: 1px solid #eeeeee;
 
   position: sticky;
@@ -60,8 +89,6 @@
 .nav-links a:hover {
   color: #e91e63;
 }
-
-/* Home active color */
 
 .nav-links a:first-child {
   color: #e91e63;
@@ -102,83 +129,28 @@
   background: var(--primary-gradient);
 }
 
-/*  HERO section  */
+/* Hamburger */
+
+.hamburger-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  color: #1f2937;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
 
 main {
-  padding: 80px 70px;
-  text-align: center;
+  padding: 0;
 }
-
-main h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  color: #111111;
-}
-
-main p {
-  font-size: 18px;
-  color: #666666;
-}
-
-
-/*  TABLET  */
-
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 30px;
-  }
-
-  .nav-links {
-    gap: 18px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-}
-
-
-/* MOBILE  */
-
-@media (max-width: 700px) {
-  .navbar {
-    height: 70px;
-    padding: 0 15px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .logo img {
-    width: 120px;
-  }
-
-  .nav-buttons {
-    gap: 10px;
-  }
-
-  .sign-in {
-    font-size: 14px;
-  }
-
-  .sign-up {
-    padding: 9px 15px;
-    font-size: 13px;
-  }
-
-  main {
-    padding: 50px 20px;
-  }
-
-  main h1 {
-    font-size: 32px;
-  }
-}
-
-/* 
-   HERO SECTION
- */
 
 .hero {
   width: 100%;
@@ -194,14 +166,9 @@ main p {
   padding: 70px 40px 80px;
 
   background: #fafbfe;
-
-  box-sizing: border-box;
 }
 
-
-/* 
-   HERO LEFT CONTENT
- */
+/* Hero Left */
 
 .hero-content {
   flex: 0 0 650px;
@@ -210,10 +177,7 @@ main p {
   text-align: left;
 }
 
-
-/* 
-   HERO HEADING
- */
+/* Hero Heading */
 
 .hero-content h1 {
   margin: 0;
@@ -231,9 +195,6 @@ main p {
   text-align: left;
 }
 
-
-/* Development Stack */
-
 .hero-content h1 span {
   display: block;
 
@@ -246,10 +207,7 @@ main p {
   background-clip: text;
 }
 
-
-/* 
-   HERO DESCRIPTION
- */
+/* Hero Description */
 
 .hero-content p {
   width: 100%;
@@ -268,10 +226,7 @@ main p {
   text-align: left;
 }
 
-
-/* 
-   HERO BUTTONS
- */
+/* Hero Buttons */
 
 .hero-buttons {
   display: flex;
@@ -280,9 +235,6 @@ main p {
 
   gap: 18px;
 }
-
-
-/* Common Button */
 
 .explore-btn,
 .learn-btn {
@@ -304,12 +256,6 @@ main p {
   transition: all 0.2s ease;
 }
 
-
-/*
-   EXPLORE TECHNOLOGIES
-   EXACT COLOR
- */
-
 .explore-btn {
   border: none;
 
@@ -320,13 +266,11 @@ main p {
   box-shadow: 0 7px 18px rgba(236, 0, 140, 0.18);
 }
 
-
 .explore-btn:hover {
   transform: translateY(-2px);
 
   box-shadow: 0 10px 24px rgba(236, 0, 140, 0.25);
 }
-
 
 .learn-btn {
   border: 1px solid #d9dce5;
@@ -336,21 +280,16 @@ main p {
   background: #f8f9fc;
 }
 
-
 .learn-btn:hover {
   background: #ffffff;
 
   transform: translateY(-2px);
 }
 
-
-/* 
-   HERO RIGHT IMAGE
- */
+/* Hero Image */
 
 .hero-image {
   flex: 1;
-
   min-width: 0;
 
   display: flex;
@@ -359,7 +298,6 @@ main p {
 
   padding-left: 25px;
 }
-
 
 .hero-image img {
   display: block;
@@ -372,15 +310,13 @@ main p {
 }
 
 
-/* 
-   LARGE TABLET
- */
+/* =========================================
+   HERO RESPONSIVE
+========================================= */
 
 @media (max-width: 1100px) {
-
   .hero {
     padding: 60px 30px 70px;
-
     gap: 30px;
   }
 
@@ -406,13 +342,7 @@ main p {
   }
 }
 
-
-/* 
-   TABLET
- */
-
 @media (max-width: 900px) {
-
   .hero {
     min-height: auto;
 
@@ -442,7 +372,6 @@ main p {
 
   .hero-image {
     width: 100%;
-
     padding-left: 0;
   }
 
@@ -451,13 +380,7 @@ main p {
   }
 }
 
-
-/* 
-   MOBILE
-*/
-
 @media (max-width: 600px) {
-
   .hero {
     padding: 45px 20px 55px;
 
@@ -466,19 +389,14 @@ main p {
 
   .hero-content {
     width: 100%;
-
     text-align: left;
   }
 
   .hero-content h1 {
     font-size: 38px;
-
     line-height: 1.12;
-
     letter-spacing: -0.8px;
   }
-
-  
 
   .hero-content h1 span {
     white-space: normal;
@@ -505,7 +423,6 @@ main p {
   .explore-btn,
   .learn-btn {
     width: 100%;
-
     height: 48px;
   }
 
@@ -515,7 +432,6 @@ main p {
 
   .hero-image img {
     width: 100%;
-
     max-width: 330px;
   }
 }
@@ -527,27 +443,35 @@ main p {
 
 .technology-section {
   width: 100%;
+
   padding: 80px 40px;
+
   background: #ffffff;
+
   box-sizing: border-box;
 }
 
 .technology-container {
   max-width: 1280px;
+
   margin: 0 auto;
 }
 
 .technology-header {
   margin-bottom: 32px;
+
   text-align: left;
 }
 
 .technology-header h2 {
   margin: 0 0 8px;
+
   font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+
   font-size: 32px;
   line-height: 1.2;
   font-weight: 700;
+
   color: #1a1d2d;
 }
 
@@ -557,21 +481,29 @@ main p {
 
 .technology-header p {
   margin: 0;
+
   font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+
   font-size: 14px;
+
   color: #8a92a6;
 }
 
+
 /* =========================================
-   MAIN LAYOUT
+   TECHNOLOGY LAYOUT
 ========================================= */
 
 .technology-layout {
   display: grid;
+
   grid-template-columns: minmax(0, 1fr) 320px;
+
   gap: 24px;
+
   align-items: start;
 }
+
 
 /* =========================================
    TECHNOLOGY GRID
@@ -579,31 +511,62 @@ main p {
 
 .technology-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 20px;
 }
 
+
 /* =========================================
-   CARD
+   LOADING STATE
+========================================= */
+
+.loading-message {
+  grid-column: 1 / -1;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   TECHNOLOGY CARD
 ========================================= */
 
 .technology-card {
   padding: 20px;
+
   background: #ffffff;
+
   border: 1px solid #efeef4;
+
   border-radius: 16px;
+
   box-sizing: border-box;
 }
 
+
 /* =========================================
-   TOP ROW
+   CARD TOP
 ========================================= */
 
 .technology-card-top {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   min-height: 36px;
+
   margin-bottom: 18px;
 }
 
@@ -612,18 +575,23 @@ main p {
   height: 36px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 9px;
+
   background: #f8fafc;
 }
 
 .technology-logo img {
   width: 32px;
   height: 32px;
+
   object-fit: contain;
 }
+
 
 /* =========================================
    BADGES
@@ -631,19 +599,21 @@ main p {
 
 .technology-badge {
   padding: 5px 9px;
+
   border-radius: 20px;
 
   font-size: 11px;
+
   font-weight: 600;
 }
 
 .popular {
-  background: #EBF8FF;
-  color:#00A3C4;
+  background: #ebf8ff;
+  color: #00a3c4;
 }
 
 .versatile {
-  background: #E6FFFA;
+  background: #e6fffa;
   color: #234e52;
 }
 
@@ -692,15 +662,18 @@ main p {
   color: #3182ce;
 }
 
+
 /* =========================================
-   CONTENT
+   CARD CONTENT
 ========================================= */
 
 .technology-card-content h3 {
   margin: 0 0 8px;
 
   font-size: 18px;
+
   line-height: 1.3;
+
   font-weight: 700;
 
   color: #0f172a;
@@ -712,20 +685,26 @@ main p {
   min-height: 58px;
 
   font-size: 13px;
+
   line-height: 1.5;
+
   font-weight: 400;
 
   color: #64748b;
+
   text-align: left;
 }
 
+
 /* =========================================
-   META
+   TECHNOLOGY META
 ========================================= */
 
 .technology-meta {
   display: flex;
+
   align-items: center;
+
   gap: 8px;
 
   margin: 18px 0;
@@ -737,6 +716,7 @@ main p {
   border-radius: 6px;
 
   background: #f8fafc;
+
   color: #64748b;
 
   font-size: 12px;
@@ -744,6 +724,7 @@ main p {
 
 .difficulty {
   font-size: 12px;
+
   color: #64748b;
 }
 
@@ -751,6 +732,7 @@ main p {
   margin-left: auto;
 
   font-size: 12px;
+
   font-weight: 600;
 
   color: #0f172a;
@@ -758,11 +740,13 @@ main p {
 
 .star {
   margin-right: 3px;
+
   color: #f59e0b;
 }
 
+
 /* =========================================
-   ADD BUTTON
+   ADD TO STACK
 ========================================= */
 
 .add-stack-btn {
@@ -771,12 +755,15 @@ main p {
   padding: 10px 0;
 
   border: none;
+
   border-radius: 10px;
 
   background: #0f172a;
+
   color: #ffffff;
 
   font-size: 13px;
+
   font-weight: 600;
 
   cursor: pointer;
@@ -788,12 +775,24 @@ main p {
   background: #0a0d14;
 }
 
+.add-stack-btn:disabled {
+  background: #e2e8f0;
+
+  color: #64748b;
+
+  cursor: not-allowed;
+
+  opacity: 1;
+}
+
+
 /* =========================================
-   YOUR STACK
+   YOUR STACK SIDEBAR
 ========================================= */
 
 .stack-sidebar {
   position: sticky;
+
   top: 100px;
 
   padding: 24px;
@@ -801,6 +800,7 @@ main p {
   background: #ffffff;
 
   border: 1px solid #efeef4;
+
   border-radius: 16px;
 
   box-sizing: border-box;
@@ -810,6 +810,7 @@ main p {
   margin: 0 0 6px;
 
   font-size: 16px;
+
   font-weight: 700;
 
   color: #0f172a;
@@ -819,8 +820,10 @@ main p {
   margin: 0;
 
   font-size: 12px;
+
   color: #94a3b8;
 }
+
 
 /* =========================================
    EMPTY STACK
@@ -830,13 +833,17 @@ main p {
   min-height: 180px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   margin-top: 24px;
+
   padding: 40px 20px;
 
   border: 1.5px dashed #cbd5e1;
+
   border-radius: 12px;
 
   box-sizing: border-box;
@@ -846,8 +853,10 @@ main p {
   margin: 0;
 
   font-size: 13px;
+
   color: #94a3b8;
 }
+
 
 /* =========================================
    SELECTED STACK
@@ -855,7 +864,9 @@ main p {
 
 .selected-stack {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 
   margin-top: 24px;
@@ -863,31 +874,55 @@ main p {
 
 .selected-stack-item {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 10px 12px;
 
   border: 1px solid #efeef4;
+
   border-radius: 10px;
 }
 
 .selected-stack-info {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
 }
 
 .selected-stack-info img {
   width: 28px;
   height: 28px;
+
   object-fit: contain;
+}
+
+.selected-stack-info > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
 }
 
 .selected-stack-info span {
   font-size: 13px;
+
   font-weight: 600;
+
   color: #0f172a;
+}
+
+.selected-stack-info small {
+  font-size: 11px;
+
+  font-weight: 400;
+
+  color: #94a3b8;
 }
 
 .selected-stack-item button {
@@ -895,9 +930,11 @@ main p {
   height: 24px;
 
   border: none;
+
   background: transparent;
 
   font-size: 20px;
+
   line-height: 1;
 
   color: #94a3b8;
@@ -908,112 +945,47 @@ main p {
 .selected-stack-item button:hover {
   color: #e53e3e;
 }
+
+
 /* =========================================
-   REMOVE ALL BUTTON
+   REMOVE ALL
 ========================================= */
 
 .remove-all-btn {
   width: 100%;
+
   margin-top: 16px;
+
   padding: 10px 14px;
 
   border: 1px solid #fecaca;
+
   border-radius: 10px;
 
   background: #ffffff;
+
   color: #e53e3e;
 
   font-size: 13px;
+
   font-weight: 600;
 
   cursor: pointer;
+
   transition: all 0.2s ease;
 }
 
 .remove-all-btn:hover {
   background: #fff1f2;
+
   border-color: #fca5a5;
 }
-/* =========================================
-   ADDED STACK BUTTON STATE
-========================================= */
-
-.add-stack-btn:disabled {
-  background: #e2e8f0;
-  color: #64748b;
-  cursor: not-allowed;
-}
 
 
-/* =========================================
-   SELECTED STACK CATEGORY
-========================================= */
-
-.selected-stack-info > div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.selected-stack-info small {
-  font-size: 11px;
-  font-weight: 400;
-  color: #94a3b8;
-}
 /* =========================================
    TECHNOLOGY RESPONSIVE
 ========================================= */
 
-@media (max-width: 1024px) {
-  .technology-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .technology-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .stack-sidebar {
-    position: static;
-  }
-
-  .technology-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .technology-section {
-    padding: 60px 20px;
-  }
-
-  .technology-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .technology-header h2 {
-    font-size: 28px;
-  }
-}
-/* =========================================
-   ADDED BUTTON - FINAL STATE
-========================================= */
-
-.add-stack-btn:disabled {
-  background: #e2e8f0 !important;
-  color: #64748b !important;
-  cursor: not-allowed;
-  opacity: 1;
-}
-
-
-/* =========================================
-   TECHNOLOGY RESPONSIVE - FINAL
-========================================= */
-
-/* Tablet */
 @media (max-width: 1024px) {
   .technology-layout {
     grid-template-columns: minmax(0, 1fr) 280px;
@@ -1024,41 +996,41 @@ main p {
   }
 }
 
-
-/* Mobile */
 @media (max-width: 768px) {
   .technology-layout {
     display: flex;
+
     flex-direction: column;
   }
 
-  /* Technology cards first */
   .technology-grid {
     width: 100%;
-    display: grid;
+
     grid-template-columns: 1fr;
+
     gap: 18px;
+
     order: 1;
   }
 
-  /* Your Stack after all cards */
   .stack-sidebar {
     width: 100%;
+
     position: static;
+
     order: 2;
   }
 }
 
-
-/* Small Mobile */
 @media (max-width: 600px) {
   .technology-section {
     padding: 50px 20px;
   }
 
   .technology-grid {
-    grid-template-columns: 1fr;
     width: 100%;
+
+    grid-template-columns: 1fr;
   }
 
   .technology-card {
@@ -1074,98 +1046,34 @@ main p {
   }
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
+
 .footer {
   width: 100%;
+
   margin-top: 40px;
-  background: #0f172a;
-  color: #ffffff;
-}
 
-.footer-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 50px 40px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.footer-brand {
-  max-width: 360px;
-}
-
-.footer-brand h3 {
-  margin: 0 0 10px;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.footer-brand p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #94a3b8;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.footer-links a {
-  font-size: 13px;
-  color: #cbd5e1;
-  transition: 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-bottom {
-  border-top: 1px solid #1e293b;
-  padding: 18px 20px;
-  text-align: center;
-}
-
-.footer-bottom p {
-  margin: 0;
-  font-size: 12px;
-  color: #64748b;
-}
-
-
-/* Footer Responsive */
-
-@media (max-width: 700px) {
-  .footer-container {
-    padding: 40px 20px;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .footer-links {
-    gap: 16px;
-  }
-}
-
-/* Footer */
-.footer {
-  width: 100%;
-  margin-top: 40px;
   background: #ffffff;
+
   color: #0f172a;
+
   border-top: 1px solid #e2e8f0;
 }
 
 .footer-container {
   max-width: 1280px;
+
   margin: 0 auto;
+
   padding: 60px 40px 50px;
+
   display: grid;
+
   grid-template-columns: 2fr 1fr 1fr 1fr;
+
   gap: 60px;
 }
 
@@ -1175,41 +1083,55 @@ main p {
 
 .footer-logo img {
   width: 150px;
+
   height: auto;
+
   display: block;
+
   margin-bottom: 18px;
 }
 
 .footer-brand p {
   color: #64748b;
+
   font-size: 14px;
+
   line-height: 1.7;
 }
 
 .social-links {
   display: flex;
+
   gap: 22px;
+
   margin-top: 24px;
 }
 
 .social-links a,
 .footer-column a,
 .footer-quick-links a {
-  color: #1e293b;;
+  color: #1e293b;
+
   text-decoration: none;
+
   font-size: 14px;
 }
 
 .footer-column {
   display: flex;
+
   flex-direction: column;
+
   gap: 14px;
 }
 
 .footer-column h4 {
   margin: 0 0 8px;
+
   color: #0f172a;
+
   font-size: 13px;
+
   letter-spacing: 0.08em;
 }
 
@@ -1221,20 +1143,173 @@ main p {
 
 .footer-bottom {
   max-width: 1280px;
+
   margin: 0 auto;
+
   padding: 20px 40px;
+
   border-top: 1px solid #e2e8f0;
+
   display: flex;
+
   justify-content: space-between;
 }
 
 .footer-bottom p {
   margin: 0;
+
   color: #64748b;
+
   font-size: 13px;
 }
 
 .footer-quick-links {
   display: flex;
+
   gap: 24px;
+}
+
+
+/* =========================================
+   NAVBAR RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .nav-buttons {
+    gap: 6px;
+  }
+
+  .sign-in,
+  .sign-up {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+    /* MOBILE FOOTER */
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 42px 16px 0;
+    text-align: center;
+  }
+
+  .footer-brand {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 125px;
+    height: auto;
+  }
+
+  .footer-brand p {
+    max-width: 320px;
+    margin: 14px auto 0;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .social-links a {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-column {
+    display: none;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    margin-top: 28px;
+    padding: 20px 16px 24px;
+    border-top: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .footer-quick-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-quick-links a {
+    font-size: 13px;
+  }
 }

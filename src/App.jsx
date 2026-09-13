@@ -54,23 +54,29 @@ useEffect(() => {
       <ToastContainer />
       {/* Navbar */}
       <header className="navbar">
-        <div className="logo">
-          <img src="/logo-text.png" alt="Dev Stack" />
-        </div>
 
-        <nav className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Technologies</a>
-          <a href="#">Projects</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
+  <button className="hamburger-btn" aria-label="Open menu">
+    ☰
+  </button>
 
-        <div className="nav-buttons">
-          <button className="sign-in">Sign In</button>
-          <button className="sign-up">Sign Up</button>
-        </div>
-      </header>
+  <div className="logo">
+    <img src="/logo-text.png" alt="Dev Stack" />
+  </div>
+
+  <nav className="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Technologies</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div className="nav-buttons">
+    <button className="sign-in">Sign In</button>
+    <button className="sign-up">Sign Up</button>
+  </div>
+
+</header>
 
       {/* Hero Section */}
       <main>
@@ -83,7 +89,7 @@ useEffect(() => {
             </h1>
 
             <p>
-              Explore frontend, backend, database, and tooling options.Compare them side by side and put together the stack that fits your next project.
+              Explore frontend, backend, database, and tooling options. Compare them side by side and put together the stack that fits your next project.
             </p>
 
             <div className="hero-buttons">
@@ -121,7 +127,12 @@ useEffect(() => {
 
       {/* Technology Cards */}
       <div className="technology-grid">
-        {technologies.map((technology) => (
+  {loading ? (
+    <div className="loading-message">
+      Loading technologies...
+    </div>
+  ) : (
+    technologies.map((technology) => (
           <div className="technology-card" key={technology.id}>
 
             <div className="technology-card-top">
@@ -183,7 +194,8 @@ useEffect(() => {
 </button>
 
           </div>
-        ))}
+               ))
+  )}
       </div>
     {/* Your Stack */}
 <aside className="stack-sidebar">
