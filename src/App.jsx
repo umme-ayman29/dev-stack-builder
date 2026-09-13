@@ -1,12 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import technologies from "./technologies";
+
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const [technologies, setTechnologies] = useState([]);
+const [loading, setLoading] = useState(true);
   const [selectedTechnologies, setSelectedTechnologies] = useState([]);
+useEffect(() => {
+  fetch("/technologies.json")
+    .then((response) => response.json())
+    .then((data) => {
+      setTechnologies(data);
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.error("Failed to load technologies:", error);
+      setLoading(false);
+    });
+}, []);
 
   const addToStack = (technology) => {
   if (selectedTechnologies.some((item) => item.id === technology.id)) {
@@ -112,10 +126,10 @@ function App() {
             <div className="technology-card-top">
 
               <div className="technology-logo">
-                <img
-                  src={technology.logo}
-                  alt={technology.name}
-                />
+                <img 
+  src={technology.icon} 
+  alt={technology.name} 
+/>
               </div>
 
               {technology.badge && (
@@ -143,7 +157,7 @@ function App() {
               </span>
 
               <span className="difficulty">
-                {technology.level}
+                {technology.difficulty}
               </span>
 
               <span className="rating">
@@ -199,7 +213,7 @@ function App() {
             <div className="selected-stack-info">
 
   <img
-    src={technology.logo}
+    src={technology.icon}
     alt={technology.name}
   />
 
