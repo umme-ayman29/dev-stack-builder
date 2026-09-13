@@ -551,6 +551,18 @@ main {
   border-radius: 16px;
 
   box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #ec008c;
+
+  box-shadow: 0 12px 30px rgba(236, 0, 140, 0.12);
 }
 
 
