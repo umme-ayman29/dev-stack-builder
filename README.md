@@ -2,7 +2,11 @@
 
 Dev Stack Builder is a responsive React web application where users can explore modern development technologies and build their own personal technology stack. Technologies are loaded from a JSON file, and users can add or remove technologies from their stack.
 
-## Technologies Used
+## 🌐 Live Website
+
+https://dev-stack-builder-red.vercel.app/
+
+## 🛠️ Technologies Used
 
 * React
 * Vite
@@ -11,13 +15,74 @@ Dev Stack Builder is a responsive React web application where users can explore 
 * React-Toastify
 * JSON
 
-## Features
+## ✨ Features
 
 1. Browse and explore modern development technologies
 2. Add and manage technologies in your personal stack
-3. Responsive design with toast notifications and loading state
+3. Remove technologies from the personal stack
+4. Load technology data from a JSON file
+5. Responsive design for different screen sizes
+6. Toast notifications for user actions
+7. Loading state while technology data is being loaded
+8. Interactive and user-friendly interface
 
-## React Questions & Answers
+## 📦 Dependencies
+
+Main dependencies used in this project include:
+
+* React
+* React DOM
+* Vite
+* React-Toastify
+
+For the complete dependency list and versions, see `package.json`.
+
+## 🚀 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_DEVSTACK_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd dev-stack-builder
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open the application
+
+Open the local URL shown in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## 📸 Project Preview
+
+Dev Stack Builder provides a clean and responsive interface where users can explore modern development technologies and create their own personalized technology stack.
+
+## 🔗 Relevant Links
+
+* **Live Website:** https://dev-stack-builder-red.vercel.app/
+* **GitHub Repository:** YOUR_DEVSTACK_GITHUB_REPOSITORY_URL
+
+---
+
+# React Questions & Answers
 
 ### 1. What is JSX, and why is it used in React?
 
@@ -149,4 +214,3 @@ function Child({ onSelect }) {
 ```
 
 Here, the parent sends the `onSelect` function to the child through props. When the button is clicked, the child calls the function and sends the action back to the parent.
-
