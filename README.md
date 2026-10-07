@@ -42,7 +42,7 @@ For the complete dependency list and versions, see `package.json`.
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_DEVSTACK_GITHUB_REPOSITORY_URL
+git clone https://github.com/umme-ayman29/dev-stack-builder.git
 ```
 
 ### 2. Navigate to the project folder
@@ -78,7 +78,7 @@ Dev Stack Builder provides a clean and responsive interface where users can expl
 ## 🔗 Relevant Links
 
 * **Live Website:** https://dev-stack-builder-red.vercel.app/
-* **GitHub Repository:** YOUR_DEVSTACK_GITHUB_REPOSITORY_URL
+* **GitHub Repository:** https://github.com/umme-ayman29/dev-stack-builder
 
 ---
 
