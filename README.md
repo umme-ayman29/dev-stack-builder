@@ -74,6 +74,7 @@ http://localhost:5173
 ## 📸 Project Preview
 
 Dev Stack Builder provides a clean and responsive interface where users can explore modern development technologies and create their own personalized technology stack.
+<img width="100%" alt="Dev Stack Builder Preview" src="https://github.com/user-attachments/assets/4629ac9a-dad4-4a62-b3f9-b5718360fb05" />
 
 ## 🔗 Relevant Links
 
